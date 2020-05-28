@@ -1,5 +1,15 @@
-accept.addEventListener('click', () => alert(':D'))
+accept.addEventListener('click', () => {
+	alert('¡Gracias! ☻☻')
+	popup.classList.toggle('popup-visible')
+
+	audio.play()
+})
 denied.addEventListener('click', () => setNewPosition())
+
+btnClose.addEventListener('click', () => {
+	audio.pause()
+	popup.classList.toggle('popup-visible')
+})
 
 var width = window.screen.width
 var lastCol = 0

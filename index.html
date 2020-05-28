@@ -2,13 +2,17 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="css/style.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#2c3e50" />
+		<meta name="author" content="Marco Chávez" />
+		<meta name="description" content="Una pregunta ☻" />
+		<link rel="shortcut icon" href="assets/Heart.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/style.css" />
 		<title>Do you...?</title>
 	</head>
 	<body>
 		<div class="container">
-			<p class="question">¿Te casarías comigo?</p>
+			<p class="question">¿Me perdonas?</p>
 			<input id="accept" type="button" class="accept" value="Acepto" />
 			<input
 				id="denied"
@@ -17,6 +21,11 @@
 				value="No Gracias"
 			/>
 		</div>
+		<div id="popup" class="popup popup-visible">
+			<img class="gif" src="assets/kawaii.gif" alt="kawaii" />
+			<div id="btnClose" class="popup__close"></div>
+		</div>
+		<audio id="audio" src="assets/happy_song.m4a"></audio>
 		<script src="script/script.js"></script>
 	</body>
 </html>

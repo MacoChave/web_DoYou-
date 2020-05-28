@@ -11,6 +11,58 @@ body {
 	color: var(--primaryText);
 }
 
+.popup {
+	display: none;
+	position: absolute;
+	width: 40%;
+	padding: 1rem;
+	border-radius: 4px;
+	top: 30%;
+	left: 30%;
+	box-sizing: content-box;
+	overflow: hidden;
+	box-shadow: 1px 1px 20px #000;
+	z-index: 100;
+}
+
+.popup-visible {
+	display: block;
+}
+
+.gif {
+	width: 100%;
+}
+
+.popup__close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2rem;
+	height: 2rem;
+	box-shadow: 1px 1px 5px #1e1e1e;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 50;
+}
+
+.popup__close::after,
+.popup__close::before {
+	content: '';
+	position: absolute;
+	width: 90%;
+	height: 20%;
+	border-radius: 5px;
+	background: var(--dennied);
+}
+
+.popup__close::after {
+	transform: rotateZ(45deg) translate(0.6rem, 0.6rem);
+}
+
+.popup__close::before {
+	transform: rotateZ(-45deg) translate(-0.6rem, 0.6rem);
+}
+
 .container {
 	display: grid;
 	grid-template-columns: repeat(6, 16%);
