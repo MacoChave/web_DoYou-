@@ -1,7 +1,8 @@
 accept.addEventListener('click', () => {
-	alert('¡Gracias! ☻☻')
+	alert('¡Gracias! (っ˘з(˘⌣˘ )')
 	popup.classList.toggle('popup-visible')
 
+        audio.volume = 0.5
 	audio.play()
 })
 denied.addEventListener('click', () => setNewPosition())
