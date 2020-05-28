@@ -1,10 +1,11 @@
 accept.addEventListener('click', () => alert(':D'))
-denied.addEventListener('click', () => setNewPosition(window.screen.width))
+denied.addEventListener('click', () => setNewPosition())
 
+var width = window.screen.width
 var lastCol = 0
 var lastRow = 0
 
-function setNewPosition(width) {
+function setNewPosition() {
 	resetPos()
 	var column = 0
 	var row = 0
@@ -27,12 +28,16 @@ function setNewPosition(width) {
 }
 
 function setPos(col, row) {
-	denied.className += ' col' + col
-	denied.className += ' row' + row
+	if (lastCol == col || lastRow == row) {
+		setNewPosition()
+	} else {
+		denied.className += ' col' + col
+		denied.className += ' row' + row
 
-	lastCol = col
-	lastRow = row
-	console.log({ x: col, y: row })
+		lastCol = col
+		lastRow = row
+		console.log({ x: col, y: row })
+	}
 }
 
 function resetPos() {
